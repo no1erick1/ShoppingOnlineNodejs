@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-ofset-3">
+		<div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
+			{{ successMsg }}
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>User Profile</h1>
+		<hr>
+		<h2>My Orders</h2>
+		{{# each orders}}
+		<div class="panel panel-default">
+  		<div class="panel-body">
+   			 <ul class="list-group">
+					 <span class="badge">The order of {{this.name}}</span>
+   			 {{#each this.items}}
+   			  <li class="list-group-item">  <span class="badge">{{this.price}}</span>
+    		{{this.item.title}} | {{ this.qty }} Units </li>
+  		</li>
+  		{{/each}}
+		</ul>
+  		</div>
+ 		<div class="panel-footer">{{ this.cart.totalPrice }} VND</div>
+		</div>
+		{{/each}}
+	</div>
+</div>

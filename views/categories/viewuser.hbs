@@ -1,0 +1,27 @@
+    {{# if type}}
+<div class="container1" style="margin-right: 10px; margin-left: 10px;">  
+{{# each users }}
+ <h2>Account list</h2>
+  <p>This is the place to edit accounts as well as decentralize for users by editing</p>            
+  <table class="table">
+<thead>
+      <tr>
+        <th>Email</th>
+        <th>Password</th>
+        <th></th>
+      </tr>
+    </thead>
+{{# each this}}
+    <tbody>
+      <tr>
+        <td>{{this.email}}</td>
+        <td>{{this.password}}</td>
+        <td> <a href="/shop/updateuser?id={{this._id}}" class="btn btn-success pull" role="button">Edit</a></td>
+      </tr>   
+    </tbody>
+  {{/each}}
+   </table>
+{{/each}}
+</div>
+{{/if}}
+

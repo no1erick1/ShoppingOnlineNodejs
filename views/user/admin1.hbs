@@ -1,0 +1,69 @@
+{{# if type}}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;     position: absolute!important;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+ <a href="../shop/admin" class="w3-bar-item w3-button w3-hover-green" >Add new product</a>
+ <a href="../categories/viewbooks"class="w3-bar-item w3-button w3-hover-black">View all books</a>		
+            <a href="../categories/viewelec" class="w3-bar-item w3-button w3-hover-blue">View all  Electronics</a>
+            <a href="../categories/viewgame" class="w3-bar-item w3-button w3-hover-black">View all Games</a>
+            <a href="../categories/viewmobile" class="w3-bar-item w3-button w3-hover-green">View all Mobiles</a>
+            <a href="../categories/viewgaming" class="w3-bar-item w3-button w3-hover-blue">View all Game Accesories</a>
+             <a href="../categories/viewuser" class="w3-bar-item w3-button w3-hover-blue">View all User</a>
+</div>
+
+<div id="main">
+
+<div class="w3-teal" style=" display: -webkit-box; 
+    background-color: rgb(0 0 0 / 20%)!important;">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" style="
+    background-color: rgb(0 0 0 / 0%)!important;" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1 style="
+    margin-top: 3px;
+">Admin page</h1>
+  </div>
+</div>
+
+<img src="https://i.pinimg.com/originals/b0/06/7a/b0067ade5e832d2aefec8ee9bda50fdc.gif" alt="Admin" style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;">
+
+<div class="panel panel-default" style="margin-left: 19.1;margin-left: 19px;margin-right: 19px;">
+  <div class="panel-heading">Admin</div>
+  <div class="panel-body">
+  <div class="w3-container" style="text-align: justify;">
+<p>Admin on this website will be mainly responsible for operating, observing and managing the tasks of lower levels. The role of admin cannot be transferred to many people, but usually only the top managers in a company, head of IT ... can take over the management of the website.</p>
+<p>Besides, when the website needs to edit the functions, web interface or install small and simple details, admin can also do it. Website administrators have their own work area (often called cpanel or admin panel) to help them control and monitor the website in the most accurate way. Every website needs a management admin to be able to function properly with the strategy and direction of the business.</p>
+</div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>
+
+{{/if}}

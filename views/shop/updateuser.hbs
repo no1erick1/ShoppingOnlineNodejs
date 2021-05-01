@@ -1,0 +1,23 @@
+  {{# if type}}
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+		<h1>Adjust permissions and change password</h1>	
+		<form action="/shop/updateuser" method="post" id="product-form">
+		<input value="{{this.use.id}}" type="hidden" id="email" name="userId" class="form-control">
+			<div class="form-group">
+				<label for="email">E-mail</label>
+				<input value="{{this.use.email}}" type="text" id="email" name="email" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" class="form-control ">
+			</div>
+			<div class="form-group">
+				<label for="type">Type</label>
+				<input type="text" id="type" name="type" class="form-control ">
+			</div>
+			<button type="submit" class="btn btn-primary">Update</button> 
+		</form>
+	</div>
+</div>
+{{/if}}
